@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import Logo from "../../asset/image/Logo.svg"
 import './index.scss'
@@ -26,7 +26,7 @@ const Navbar = () => {
                     el.innerText = '';
 
                     letters.forEach(function (letter) {
-                        if (letter == " ") {
+                        if (letter === " ") {
                             letter = "&nbsp;";
                         }
                         el.innerHTML += '<span class="letter">' + letter + '</span>';

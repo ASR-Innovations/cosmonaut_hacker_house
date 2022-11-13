@@ -1,0 +1,43 @@
+@import "./asset/scss/style.scss";
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+body a {
+  text-decoration: none;
+}
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+.App {
+  background-image: url("./asset/image/main_bg.svg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}

@@ -1,0 +1,31 @@
+@import "../../asset/scss/style.scss";
+
+.home_main_container {
+  .max_width {
+    .home_container {
+      height: 85vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .text_box {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+        color: white;
+        .title {
+          font-weight: 700;
+          font-size: 8rem;
+        }
+        .paira {
+          text-align: center;
+          font-size: 2.8rem;
+        }
+        .button {
+          display: flex;
+          justify-content: center;
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import "./variables.scss";
+
+.max_width {
+  display: block;
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.soft_box_shadow {
+  box-shadow: 0 0 10px 5px rgba($color: #000000, $alpha: 0.2);
+}
+
+.btn_primary {
+  padding: 0.7rem 3rem;
+  outline: none;
+  border: 3px solid $border-color;
+  border-radius: 25px;
+  background: transparent;
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  &:hover {
+    background-color: $border-color;
+    color: $primary-color;
+  }
+}

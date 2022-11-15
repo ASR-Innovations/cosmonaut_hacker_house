@@ -32,12 +32,11 @@ body a {
   }
 }
 
-.App {
-  background-image: url("./asset/image/main_bg.svg");
-  width: 100vw;
+.main_bg_image_container .main_bg_image {
+  position: fixed;
+  z-index: -1;
+  object-fit: cover;
   height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+  width: 100vw;
+  object-position: top;
 }

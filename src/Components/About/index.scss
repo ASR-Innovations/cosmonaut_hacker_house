@@ -1,0 +1,22 @@
+@import "../../asset/scss/style.scss";
+
+.about_main_container {
+  .max_width {
+    .about_container {
+      .text_container {
+        .heading {
+        }
+        .paira {
+        }
+      }
+      .testimonials_cards_container {
+        margin-bottom: 10rem;
+        .testimonial_cards {
+          display: flex;
+          justify-content: space-between;
+          column-gap: 2rem;
+        }
+      }
+    }
+  }
+}

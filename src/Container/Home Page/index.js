@@ -28,14 +28,14 @@ const HomePage = () => {
                 </div>
             </section>
 
-        {/* Gap  */}
-        <section>
-            <div className="gap"></div>
-        </section>
+            {/* Gap  */}
+            <section>
+                <div className="gap"></div>
+            </section>
 
             {/* Aboubt Section  */}
             <section>
-                <div className="home_about_main_container">
+                <div className="home_about_main_container" data-aos="fade-up" data-aos-duration="1000">
                     <About />
                 </div>
             </section>

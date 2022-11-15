@@ -1,0 +1,56 @@
+@import "../../../asset/scss/style.scss";
+
+.about_cards_main_container {
+  .about_cards_container {
+    .box_1 {
+      position: relative;
+      height: 33rem;
+      width: 40rem;
+      border: 0.8px solid rgba($color: $border-color, $alpha: 0.8);
+      border-radius: 10px;
+      transform: rotate(2deg);
+      backdrop-filter: blur(5px);
+      .box_2 {
+        height: 33rem;
+        width: 40rem;
+        border: 0.5px solid rgba($color: $border-color, $alpha: 0.8);
+        border-radius: 10px;
+        transform: rotate(-2.3deg);
+        padding: 3.2rem 2rem;
+        color: white;
+        .number {
+          padding-bottom: 0.8rem;
+          .number_text {
+            font-size: 3.7rem;
+            font-weight: 600;
+            line-height: 4rem;
+          }
+          .underline {
+            height: 1px;
+            width: 4rem;
+            background-color: white;
+          }
+        }
+        .title {
+          font-size: 3rem;
+          font-weight: 600;
+          line-height: 4rem;
+          padding-bottom: 0.5rem;
+        }
+        .paira {
+          font-size: 1.4rem;
+          line-height: 2.1rem;
+          font-weight: 400;
+
+        }
+      }
+      .clip {
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        top: -6%;
+        left: 5%;
+      }
+    }
+  }
+}

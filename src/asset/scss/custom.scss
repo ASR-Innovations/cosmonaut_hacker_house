@@ -1,5 +1,32 @@
 @import "./variables.scss";
 
+// Margins
+.mt-1 {
+  margin-top: 1rem;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+.mt-3 {
+  margin-top: 3rem;
+}
+.mt-4 {
+  margin-top: 4rem;
+}
+.mt-5 {
+  margin-top: 5rem;
+}
+.mt-6 {
+  margin-top: 6rem;
+}
+.mt-7 {
+  margin-top: 7rem;
+}
+.mt-8 {
+  margin-top: 8rem;
+}
+
+// Max width
 .max_width {
   display: block;
   max-width: 1300px;
@@ -7,10 +34,42 @@
   padding: 0 1rem;
 }
 
+
+// Gap 
+.gap{
+    height: 23rem;
+
+}
+
+// Primary Headings
+.primary_heading {
+  color: white;
+  font-size: 4.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+// Primary paira
+.primary_paira {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 200;
+  width: 90%;
+  margin: auto;
+  display: block;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  margin-bottom: 8rem;
+}
+
+// Box Shadow
 .soft_box_shadow {
   box-shadow: 0 0 10px 5px rgba($color: #000000, $alpha: 0.2);
 }
 
+// Buttons
 .btn_primary {
   padding: 0.7rem 3rem;
   outline: none;

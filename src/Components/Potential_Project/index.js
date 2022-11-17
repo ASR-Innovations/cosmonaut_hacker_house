@@ -1,6 +1,7 @@
 import React from 'react'
 import PotentialSingleCard from '../Common/Potential_Single_Card';
 import './index.scss';
+import COMDEX_ICON from '../../asset/image/Projects_logo/comdex_logo.svg';
 
 const PotentialProject = () => {
     return (
@@ -16,20 +17,21 @@ const PotentialProject = () => {
 
                     <div className="potential_card_box">
                         <div className="potential_container">
-                            <PotentialSingleCard />
-                            <PotentialSingleCard />
-                            <PotentialSingleCard />
-                            <PotentialSingleCard />
-                            <PotentialSingleCard />
-                            <PotentialSingleCard />
-                            <PotentialSingleCard />
-                            <PotentialSingleCard />
-                            <PotentialSingleCard />
-                            <PotentialSingleCard />
-                            <PotentialSingleCard />
-                            <PotentialSingleCard />
-                            <PotentialSingleCard />
-                            <PotentialSingleCard />
+                            <PotentialSingleCard image={COMDEX_ICON} />
+                            <PotentialSingleCard image={COMDEX_ICON} />
+                            <PotentialSingleCard image={COMDEX_ICON} />
+                            <PotentialSingleCard image={COMDEX_ICON} />
+                            <PotentialSingleCard image={COMDEX_ICON} />
+                            <PotentialSingleCard image={COMDEX_ICON} />
+                            <PotentialSingleCard image={COMDEX_ICON} />
+                            <PotentialSingleCard image={COMDEX_ICON} />
+                            <PotentialSingleCard image={COMDEX_ICON} />
+                            <PotentialSingleCard image={COMDEX_ICON} />
+                            <PotentialSingleCard image={COMDEX_ICON} />
+                            <PotentialSingleCard image={COMDEX_ICON} />
+                            <PotentialSingleCard image={COMDEX_ICON} />
+                            <PotentialSingleCard image={COMDEX_ICON} />
+                          
                         </div>
 
                         <div className="text_container">

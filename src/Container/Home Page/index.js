@@ -47,7 +47,7 @@ const HomePage = () => {
             </section>
 
             <section>
-                <div className="home_speaker_main_container" >
+                <div className="home_speaker_main_container" data-aos="fade-up" data-aos-duration="1000">
                     <Speakers />
                 </div>
             </section>

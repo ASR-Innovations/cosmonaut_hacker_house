@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import './index.scss'
 import { AiOutlineTwitter } from 'react-icons/ai';
@@ -20,13 +21,13 @@ const Footer = () => {
                             <div className="links">
                                 <ul>
                                     <li>
-                                        <a href=""> <AiOutlineTwitter /></a>
+                                        <a href="#" > <AiOutlineTwitter /></a>
                                     </li>
                                     <li>
-                                        <a href=""><FaTelegramPlane /></a>
+                                        <a href="#" ><FaTelegramPlane /></a>
                                     </li>
                                     <li>
-                                        <a href=""><FaDiscord /></a>
+                                        <a href="#" ><FaDiscord /></a>
                                     </li>
                                 </ul>
                             </div>

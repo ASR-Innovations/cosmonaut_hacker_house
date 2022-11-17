@@ -32,6 +32,7 @@
             column-gap: 4rem;
             font-size: 2rem;
             font-weight: 400;
+            margin: 0;
             li {
               list-style: none;
               a {
@@ -64,5 +65,114 @@
   50% {
     -webkit-transform: translateY(-30%);
     transform: translateY(-30%);
+  }
+}
+
+.contact_us_modal_main_container {
+  .ant-modal-content {
+    background-color: transparent;
+    background-color: none;
+    background-image: url("../../asset/image/clipBox.svg");
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .ant-modal-body {
+    }
+  }
+
+  .modal_main_container {
+    .modal_close {
+      background-color: saddlebrown;
+      height: 100%;
+      width: 100%;
+    }
+    .modal_overlay {
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba($color: #000000, $alpha: 0.9);
+      z-index: 10;
+    }
+    .form_content {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      top: 50%;
+      width: 45%;
+      height: 90vh;
+      overflow: scroll;
+      z-index: 11;
+
+      .image {
+        height: 100%;
+        width: 100%;
+        color: white;
+        // background-color: purple;
+        padding: 4rem 1rem 2rem 2rem;
+        .box_1 {
+          position: relative;
+          height: 98%;
+          width: 98%;
+          border: 0.8px solid rgba($color: $border-color, $alpha: 0.8);
+          border-radius: 10px;
+          transform: rotate(2deg);
+          backdrop-filter: blur(2px);
+          .box_2 {
+            height: 100%;
+            width: 100%;
+            border: 0.5px solid rgba($color: $border-color, $alpha: 0.8);
+            border-radius: 10px;
+            transform: rotate(-2.3deg);
+            padding: 3.2rem 2rem;
+
+            .form_content_container {
+              width: 100%;
+              margin-top: 1rem;
+              .name_box {
+                display: flex;
+                column-gap: 1rem;
+                // .ant-form-item {
+                //   width: 100%;
+                //   margin: 0;
+                //   .ant-form-item-row {
+                //     .ant-form-item-control {
+                //       .ant-form-item-control-input {
+                //         .ant-form-item-control-input-content {
+                //           input {
+                //           }
+                //         }
+                //       }
+                //     }
+                //   }
+                // }
+              }
+              .submit_btn {
+                padding: .8rem 7rem;
+              }
+            }
+          }
+        }
+        .clip {
+          img {
+            height: 80px;
+            width: 80px;
+            position: absolute;
+            top: 0%;
+            left: 5%;
+          }
+        }
+      }
+    }
   }
 }

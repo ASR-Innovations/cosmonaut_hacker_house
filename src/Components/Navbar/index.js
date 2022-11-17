@@ -1,9 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import Logo from "../../asset/image/Logo.svg"
 import './index.scss'
+import { Select } from 'antd';
+import {  Form, Input } from 'antd';
+import clip from '../../asset/image/Clip.svg'
+
 
 const Navbar = () => {
+    const { Option } = Select;
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const showModal = () => {
+        setIsModalOpen(true);
+    };
+  
+    const handleCancel = () => {
+        setIsModalOpen(false);
+    };
+
+    const onFinish = (values) => {
+        console.log('Success:', values);
+    };
+    const onFinishFailed = (errorInfo) => {
+        console.log('Failed:', errorInfo);
+    };
+
+    const prefixSelector = (
+        <Form.Item name="prefix" noStyle>
+            <Select defaultValue="+91" style={{ width: 70 }}>
+                <Option value="91">+91</Option>
+            </Select>
+        </Form.Item>
+    );
 
 
     const animationFunction = () => {
@@ -50,6 +80,11 @@ const Navbar = () => {
     }
 
 
+
+
+
+
+
     return (
         <>
             <div className="navbar_main_container soft_box_shadow">
@@ -93,8 +128,163 @@ const Navbar = () => {
                         </div>
                         <div className="button_container">
                             <div className="button_box">
-                                <button className='btn_primary'>Contact Us</button>
+                                <button className='btn_primary' onClick={showModal}>Contact Us</button>
                             </div>
+
+                            <div className="contact_us_modal_main_container">
+                                {/* <Modal open={isModalOpen}
+                                    onOk={handleOk}
+                                    className="contact_us_modal_main_container"
+                                    centered={true}
+                                    onCancel={handleCancel}
+                                    footer={false}
+
+                                >
+                                    <p>Some contents...</p>
+                                    <p>Some contents...</p>
+                                    <p>Some contents...</p>
+                                </Modal> */}
+                                {
+                                    isModalOpen && (
+                                        <div>
+                                            <div className="modal_main_container">
+                                                <div className="modal_close"></div>
+                                                <div className="modal_overlay" onClick={() => handleCancel()}>
+                                                </div>
+                                                <div className="form_content">
+                                                    <div className="image">
+                                                        <div className="box_1">
+                                                            <div className="box_2">
+
+                                                                {/* <div className="form_content_container">
+                                                                    <div className="name_box">
+                                                                        <div className="first"></div>
+                                                                        <div className="last"></div>
+                                                                    </div>
+                                                                    <div className="email"></div>
+                                                                    <div className="phone">
+
+                                                                    </div>
+                                                                    <div className="university_college"></div>
+                                                                    <div className="message"></div>
+                                                                </div> */}
+
+                                                                <div className="form_content_container">
+                                                                    <Form
+                                                                        name="basic"
+                                                                        labelCol={{ span: 8, }}
+                                                                        // wrapperCol={{ span: 26, }}
+                                                                        initialValues={{
+                                                                            remember: true,
+                                                                        }}
+                                                                        onFinish={onFinish}
+                                                                        onFinishFailed={onFinishFailed}
+                                                                        autoComplete="off"
+                                                                    >
+                                                                        <div className="name_box">
+
+                                                                            <Form.Item name="firstName"
+                                                                                rules={[
+                                                                                    {
+                                                                                        required: true,
+                                                                                        message: 'Please input your First Name!',
+                                                                                    },
+                                                                                ]}
+                                                                            >
+                                                                                <Input placeholder='First Name' />
+                                                                            </Form.Item>
+
+                                                                            <Form.Item name="lastName"
+                                                                                rules={[
+                                                                                    {
+                                                                                        required: true,
+                                                                                        message: 'Please input your Last Name!',
+                                                                                    },
+                                                                                ]}
+                                                                            >
+                                                                                <Input placeholder='Last Name' />
+                                                                            </Form.Item>
+                                                                        </div>
+
+                                                                        <div className="email_box">
+                                                                            <Form.Item name="email"
+                                                                                rules={[
+                                                                                    {
+                                                                                        required: true,
+                                                                                        message: 'Please input your Email!',
+                                                                                    },
+                                                                                ]}
+                                                                            >
+                                                                                <Input placeholder='Email' />
+                                                                            </Form.Item>
+                                                                        </div>
+                                                                        <div className="phone">
+                                                                            <Form.Item name="phone"
+                                                                                rules={[
+                                                                                    {
+                                                                                        required: true,
+                                                                                        message: 'Please input your Phone!',
+                                                                                    },
+                                                                                ]}
+                                                                            >
+                                                                                <Input type="number" addonBefore={prefixSelector} placeholder='Phone' />
+                                                                            </Form.Item>
+                                                                        </div>
+
+                                                                        <div className="university">
+                                                                            <Form.Item name="university"
+                                                                                rules={[
+                                                                                    {
+                                                                                        required: true,
+                                                                                        message: 'Please input your University/Company Name!',
+                                                                                    },
+                                                                                ]}
+                                                                            >
+                                                                                <Input  placeholder='University/Company Name' />
+                                                                            </Form.Item>
+                                                                        </div>
+
+                                                                        <div className="message">
+                                                                            <Form.Item name="message"
+                                                                                rules={[
+                                                                                    {
+                                                                                        required: true,
+                                                                                        message: 'Please input your Message!',
+                                                                                    },
+                                                                                ]}
+                                                                            >
+                                                                                <Input placeholder='Message' />
+                                                                            </Form.Item>
+                                                                        </div>
+
+                                                                        <Form.Item
+                                                                            wrapperCol={{
+                                                                                offset: 8,
+                                                                                span: 16,
+                                                                            }}
+                                                                        >
+                                                                            <button type="primary" htmlType="submit" className='submit_btn btn_primary'>
+                                                                                Submit
+                                                                            </button>
+                                                                        </Form.Item>
+                                                                    </Form>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <div className="clip">
+                                                            <img src={clip} alt="Clip" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                }
+
+                            </div>
+
+
                         </div>
                     </div>
                 </div>

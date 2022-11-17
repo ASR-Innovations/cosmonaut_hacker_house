@@ -1,5 +1,7 @@
 import React from 'react';
 import About from '../../Components/About';
+import Footer from '../../Components/Footer';
+import Partners from '../../Components/Partner';
 import PotentialProject from '../../Components/Potential_Project';
 import Speakers from '../../Components/Speaker';
 import './index.scss';
@@ -70,8 +72,19 @@ const HomePage = () => {
             </section>
 
             <section>
-                <div className="home_partner_main_container">
-                    
+                <div className="home_partner_main_container" data-aos="fade-up" data-aos-duration="1000">
+                    <Partners />
+                </div>
+            </section>
+
+            {/* Gap  */}
+            <section>
+                <div className="gap"></div>
+            </section>
+
+            <section>
+                <div className="home_footer_main_container">
+                    <Footer />
                 </div>
             </section>
         </>

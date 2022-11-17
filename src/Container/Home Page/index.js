@@ -68,6 +68,12 @@ const HomePage = () => {
             <section>
                 <div className="gap"></div>
             </section>
+
+            <section>
+                <div className="home_partner_main_container">
+                    
+                </div>
+            </section>
         </>
     )
 }

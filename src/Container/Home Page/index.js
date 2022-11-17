@@ -1,5 +1,6 @@
 import React from 'react';
 import About from '../../Components/About';
+import PotentialProject from '../../Components/Potential_Project';
 import Speakers from '../../Components/Speaker';
 import './index.scss';
 
@@ -49,6 +50,17 @@ const HomePage = () => {
             <section>
                 <div className="home_speaker_main_container" data-aos="fade-up" data-aos-duration="1000">
                     <Speakers />
+                </div>
+            </section>
+
+            {/* Gap  */}
+            <section>
+                <div className="gap"></div>
+            </section>
+
+            <section>
+                <div className="home_potential_project_main_container" data-aos="fade-up" data-aos-duration="1000">
+                    <PotentialProject />
                 </div>
             </section>
 

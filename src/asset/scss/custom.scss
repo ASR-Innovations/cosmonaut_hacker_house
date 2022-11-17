@@ -34,11 +34,9 @@
   padding: 0 1rem;
 }
 
-
-// Gap 
-.gap{
-    height: 14rem;
-
+// Gap
+.gap {
+  height: 14rem;
 }
 
 // Primary Headings
@@ -85,5 +83,37 @@
   &:hover {
     background-color: $border-color;
     color: $primary-color;
+  }
+}
+
+// ant input
+.ant-form-item {
+  width: 100%;
+  margin: 0;
+  .ant-form-item-row {
+    .ant-form-item-control {
+      .ant-form-item-control-input {
+        .ant-form-item-control-input-content {
+          .ant-input {
+            font-size: 1.7rem;
+            background: transparent;
+            color: white;
+            padding: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ant-input-group-addon {
+  background: transparent !important;
+  margin-right: 1rem !important;
+  .ant-select-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5.8rem !important;
+    color: white !important;
   }
 }

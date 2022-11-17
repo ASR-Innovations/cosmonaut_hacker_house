@@ -4,6 +4,7 @@ import './App.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import mainImage from './asset/image/main_bg.svg';
+import "antd/dist/antd.min.css";
 
 function App() {
   AOS.init();

@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/jsx-no-target-blank */
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import Logo from "../../asset/image/Logo.svg"
@@ -95,57 +97,13 @@ const Navbar = () => {
                                 <Link to="/">  <img src={Logo} alt="Cosmonaut" /></Link>
                             </div>
                         </div>
-                        <div className="links_container">
-                            <div className="links">
-                                <ul>
-                                    <li>
-                                        {/* <NavLink className="wobble" onMouseEnter={animationFunction}> */}
-                                        <a href="#about">
-                                            About
 
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#speakers">
-                                            Speakers
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#sponsors">
-                                            Sponsors
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#partners">
-                                            Partners
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#agends">
-                                            Agenda
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
                         <div className="button_container">
                             <div className="button_box">
-                                <button className='btn_primary' onClick={showModal}>Contact Us</button>
+                                <a href="https://forms.gle/mjeYhhqy6FZdvTe97" target="_blank">  <button className='btn_primary' >Contact Us</button> </a>
                             </div>
 
                             <div className="contact_us_modal_main_container">
-                                {/* <Modal open={isModalOpen}
-                                    onOk={handleOk}
-                                    className="contact_us_modal_main_container"
-                                    centered={true}
-                                    onCancel={handleCancel}
-                                    footer={false}
-
-                                >
-                                    <p>Some contents...</p>
-                                    <p>Some contents...</p>
-                                    <p>Some contents...</p>
-                                </Modal> */}
                                 {
                                     isModalOpen && (
                                         <div>
@@ -156,20 +114,6 @@ const Navbar = () => {
                                                     <div className="image">
                                                         <div className="box_1">
                                                             <div className="box_2">
-
-                                                                {/* <div className="form_content_container">
-                                                                    <div className="name_box">
-                                                                        <div className="first"></div>
-                                                                        <div className="last"></div>
-                                                                    </div>
-                                                                    <div className="email"></div>
-                                                                    <div className="phone">
-
-                                                                    </div>
-                                                                    <div className="university_college"></div>
-                                                                    <div className="message"></div>
-                                                                </div> */}
-
                                                                 <div className="form_content_container">
                                                                     <Form
                                                                         name="basic"

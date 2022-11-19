@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
 import About from '../../Components/About';
 import Footer from '../../Components/Footer';
@@ -24,67 +26,11 @@ const HomePage = () => {
 
                                 </div>
                                 <div className="button">
-                                    <button className='btn_primary'>JOIN WAITLIST</button>
+                                    <a href="https://forms.gle/o1xqMebf5GMpbmGx9" target="_blank"><button className='btn_primary'>JOIN WAITLIST</button></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            {/* Gap  */}
-            <section id='about'>
-                <div className="gap"></div>
-            </section>
-
-            {/* About Section  */}
-            <section >
-                <div className="home_about_main_container" data-aos="fade-up" data-aos-duration="1000">
-                    <About />
-                </div>
-            </section>
-
-            {/* Gap  */}
-            <section id='speakers'>
-                <div className="gap"></div>
-            </section>
-
-            <section>
-                <div className="home_speaker_main_container" data-aos="fade-up" data-aos-duration="1000">
-                    <Speakers />
-                </div>
-            </section>
-
-            {/* Gap  */}
-            <section id='sponsors'>
-                <div className="gap"></div>
-            </section>
-
-            <section>
-                <div className="home_potential_project_main_container" data-aos="fade-up" data-aos-duration="1000">
-                    <PotentialProject />
-                </div>
-            </section>
-
-            {/* Gap  */}
-            <section id='partners'>
-                <div className="gap"></div>
-            </section>
-
-            <section>
-                <div className="home_partner_main_container" data-aos="fade-up" data-aos-duration="1000">
-                    <Partners />
-                </div>
-            </section>
-
-            {/* Gap  */}
-            <section>
-                <div className="gap"></div>
-            </section>
-
-            <section>
-                <div className="home_footer_main_container">
-                    <Footer />
                 </div>
             </section>
         </>

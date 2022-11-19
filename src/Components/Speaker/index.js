@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import SpeakerSingleCard from '../Common/Speaker_Single_Card';
 import './index.scss'

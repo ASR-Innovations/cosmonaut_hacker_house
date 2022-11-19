@@ -32,11 +32,13 @@ body a {
   }
 }
 
-.main_bg_image_container .main_bg_image {
-  position: fixed;
-  z-index: -1;
-  object-fit: cover;
-  height: 100vh;
-  width: 100vw;
-  object-position: top;
+.main_bg_image_container {
+  .main_bg_image {
+    position: fixed;
+    z-index: -1;
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+    object-position: top;
+  }
 }

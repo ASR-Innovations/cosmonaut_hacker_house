@@ -8,16 +8,24 @@
       width: 40rem;
       border: 0.8px solid rgba($color: $border-color, $alpha: 0.8);
       border-radius: 10px;
-      transform: rotate(2deg);
+      transform: rotate(1deg);
       backdrop-filter: blur(2px);
+      @media only screen and (max-width: 740px) {
+        height: 25rem;
+        width: 65rem;
+      }
       .box_2 {
         height: 33rem;
         width: 40rem;
         border: 0.5px solid rgba($color: $border-color, $alpha: 0.8);
         border-radius: 10px;
-        transform: rotate(-2.3deg);
+        transform: rotate(-1deg);
         padding: 3.2rem 2rem;
         color: white;
+        @media only screen and (max-width: 740px) {
+          height: 25rem;
+          width: 65rem;
+        }
         .number {
           padding-bottom: 0.8rem;
           .number_text {
@@ -41,7 +49,6 @@
           font-size: 1.4rem;
           line-height: 2.1rem;
           font-weight: 400;
-
         }
       }
       .clip {
@@ -50,6 +57,12 @@
         position: absolute;
         top: -6%;
         left: 5%;
+        @media only screen and (max-width: 740px) {
+          top: -10%;
+        }
+        @media only screen and (max-width: 550px) {
+          top: -15%;
+        }
       }
     }
   }

@@ -15,12 +15,12 @@ const Speakers = () => {
                         </div>
 
                         <div className="image_main_container">
-                            <div className="image_container">
+                            {/* <div className="image_container">
                                 <SpeakerSingleCard />
                                 <SpeakerSingleCard />
                                 <SpeakerSingleCard />
                                 <SpeakerSingleCard />
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className="revealed_soon_container">

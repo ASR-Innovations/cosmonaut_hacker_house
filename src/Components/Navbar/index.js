@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import Logo from "../../asset/image/Logo.svg"
 import './index.scss'
 import { Select } from 'antd';
-import {  Form, Input } from 'antd';
+import { Form, Input } from 'antd';
 import clip from '../../asset/image/Clip.svg'
 
 
@@ -15,7 +15,7 @@ const Navbar = () => {
     const showModal = () => {
         setIsModalOpen(true);
     };
-  
+
     const handleCancel = () => {
         setIsModalOpen(false);
     };
@@ -99,29 +99,31 @@ const Navbar = () => {
                             <div className="links">
                                 <ul>
                                     <li>
-                                        <NavLink className="wobble" onMouseEnter={animationFunction}>
+                                        {/* <NavLink className="wobble" onMouseEnter={animationFunction}> */}
+                                        <a href="#about">
                                             About
-                                        </NavLink>
+
+                                        </a>
                                     </li>
                                     <li>
-                                        <NavLink className="wobble" onMouseEnter={animationFunction}>
+                                        <a href="#speakers">
                                             Speakers
-                                        </NavLink>
+                                        </a>
                                     </li>
                                     <li>
-                                        <NavLink className="wobble" onMouseEnter={animationFunction}>
+                                        <a href="#sponsors">
                                             Sponsors
-                                        </NavLink>
+                                        </a>
                                     </li>
                                     <li>
-                                        <NavLink className="wobble" onMouseEnter={animationFunction}>
+                                        <a href="#partners">
                                             Partners
-                                        </NavLink>
+                                        </a>
                                     </li>
                                     <li>
-                                        <NavLink className="wobble" onMouseEnter={animationFunction}>
+                                        <a href="#agends">
                                             Agenda
-                                        </NavLink>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -148,7 +150,6 @@ const Navbar = () => {
                                     isModalOpen && (
                                         <div>
                                             <div className="modal_main_container">
-                                                <div className="modal_close"></div>
                                                 <div className="modal_overlay" onClick={() => handleCancel()}>
                                                 </div>
                                                 <div className="form_content">
@@ -240,7 +241,7 @@ const Navbar = () => {
                                                                                     },
                                                                                 ]}
                                                                             >
-                                                                                <Input  placeholder='University/Company Name' />
+                                                                                <Input placeholder='University/Company Name' />
                                                                             </Form.Item>
                                                                         </div>
 

@@ -20,8 +20,8 @@ const About = () => {
                             <div className="testimonial_cards">
                                 <AboutCards
                                     number="01"
-                                    title="Hackathon"
-                                    paira="We envision making this the most efficient hackathon where the hackers are building and learning side-by-side. With our one-month virtual bootcamp, conducted by core builders of Cosmos, hackers that are new to Cosmos tech will also get a fair chance to learn and build their project under the guidance and mentorship of these core cosmos builders."
+                                    title="Hackathon & Bootcamp"
+                                    paira="With our one-month virtual bootcamp, conducted by core builders of Cosmos, hackers that are new to Cosmos tech will also get a fair chance to learn and build their project under the guidance and mentorship of these core cosmos builders."
                                 />
                                 <AboutCards
                                     number="02"
@@ -31,7 +31,7 @@ const About = () => {
                                 <AboutCards
                                     number="03"
                                     title="Workshop"
-                                    paira="For the attendees joining us in the event, we'll organize multiple workshops for techies and non-techies to learn about Cosmos, NFTs, DeFi, and much more. Keep your notebooks and pen ready."
+                                    paira="For the attendees joining us in the event, we'll organize multiple workshops for techies and non-techies to learn about Cosmos, NFTs, DeFi, and much more. Keep your notebooks and pen ready!"
                                 />
                             </div>
                         </div>

@@ -5,7 +5,8 @@ import './index.scss'
 import { Select } from 'antd';
 import { Form, Input } from 'antd';
 import clip from '../../asset/image/Clip.svg'
-
+import { BiMenuAltRight } from 'react-icons/bi';
+import { CountryCode } from '../../Constant/country-code';
 
 const Navbar = () => {
     const { Option } = Select;
@@ -27,10 +28,18 @@ const Navbar = () => {
         console.log('Failed:', errorInfo);
     };
 
+    const codeOption = (
+        CountryCode.map((n, i) => {
+            return (
+                <Option key={i} value={n.dial_code}><span className="flag">{n.code}</span><span className="ccode">+{n.dial_code}</span></Option>
+            )
+        })
+    );
+
     const prefixSelector = (
-        <Form.Item name="prefix" noStyle>
-            <Select defaultValue="+91" style={{ width: 70 }}>
-                <Option value="91">+91</Option>
+        <Form.Item name="prefix" noStyle initialValue={91}>
+            <Select placeholder={<><span className="flag">US</span><span className="ccode">+1</span></>} className="select-class-custom" dropdownClassName="dropdown-custom" style={{ width: 100 }}>
+                {codeOption}
             </Select>
         </Form.Item>
     );
@@ -78,23 +87,25 @@ const Navbar = () => {
             });
         });
     }
+    const toggleNav = () => {
+        const navContainer = document.querySelector('.navbar_container');
+        navContainer.classList.toggle("nav_height");
 
-
-
-
-
-
+    }
 
     return (
         <>
             <div className="navbar_main_container soft_box_shadow">
                 <div className="max_width">
-                    <div className="navbar_container">
+                    <div className="navbar_container ">
+
                         <div className="logo_container">
                             <div className="logo">
-                                <Link to="/">  <img src={Logo} alt="Cosmonaut" /></Link>
+                                <a href="#/">  <img src={Logo} alt="Cosmonaut" /></a>
+                                {/* <a href="#/"> <Link to="/">  <img src={Logo} alt="Cosmonaut" /></Link></a> */}
                             </div>
                         </div>
+
                         <div className="links_container">
                             <div className="links">
                                 <ul>
@@ -128,24 +139,13 @@ const Navbar = () => {
                                 </ul>
                             </div>
                         </div>
+
                         <div className="button_container">
                             <div className="button_box">
                                 <button className='btn_primary' onClick={showModal}>Contact Us</button>
                             </div>
 
                             <div className="contact_us_modal_main_container">
-                                {/* <Modal open={isModalOpen}
-                                    onOk={handleOk}
-                                    className="contact_us_modal_main_container"
-                                    centered={true}
-                                    onCancel={handleCancel}
-                                    footer={false}
-
-                                >
-                                    <p>Some contents...</p>
-                                    <p>Some contents...</p>
-                                    <p>Some contents...</p>
-                                </Modal> */}
                                 {
                                     isModalOpen && (
                                         <div>
@@ -156,19 +156,6 @@ const Navbar = () => {
                                                     <div className="image">
                                                         <div className="box_1">
                                                             <div className="box_2">
-
-                                                                {/* <div className="form_content_container">
-                                                                    <div className="name_box">
-                                                                        <div className="first"></div>
-                                                                        <div className="last"></div>
-                                                                    </div>
-                                                                    <div className="email"></div>
-                                                                    <div className="phone">
-
-                                                                    </div>
-                                                                    <div className="university_college"></div>
-                                                                    <div className="message"></div>
-                                                                </div> */}
 
                                                                 <div className="form_content_container">
                                                                     <Form
@@ -257,17 +244,11 @@ const Navbar = () => {
                                                                                 <Input placeholder='Message' />
                                                                             </Form.Item>
                                                                         </div>
-
-                                                                        <Form.Item
-                                                                            wrapperCol={{
-                                                                                offset: 8,
-                                                                                span: 16,
-                                                                            }}
-                                                                        >
+                                                                        <div className="submit_btn_main_container">
                                                                             <button type="primary" htmlType="submit" className='submit_btn btn_primary'>
                                                                                 Submit
                                                                             </button>
-                                                                        </Form.Item>
+                                                                        </div>
                                                                     </Form>
                                                                 </div>
 
@@ -286,6 +267,10 @@ const Navbar = () => {
                             </div>
 
 
+                        </div>
+
+                        <div className="menu_button">
+                            <div onClick={() => toggleNav()}> <BiMenuAltRight /></div>
                         </div>
                     </div>
                 </div>

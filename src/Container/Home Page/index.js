@@ -10,7 +10,7 @@ const HomePage = () => {
     return (
         <>
             {/* Hero section  */}
-            <section>
+            <section id='/'>
                 <div className="home_main_container ">
                     <div className="max_width">
                         <div className="home_container " >

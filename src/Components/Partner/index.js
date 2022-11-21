@@ -11,7 +11,7 @@ const Partners = () => {
                     <div className="partner_comntainer">
                         <div className="titel_container">
                             <div className="heading primary_heading">
-                                Potential Projects Joining
+                                Partners
                             </div>
                         </div>
 
